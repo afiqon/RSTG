@@ -25,7 +25,7 @@ class CommentController extends Controller
      	// $comments=User::whereHas('comment')->get();
       //   $comment2=comment::with('categorie')->get();
       //   $cat=Categorie::with('comment')->get();
-        // $tg=tbl_tg::with('user','tg_type')->get();
+        $tg=tbl_tg::with('user','tg_type')->where('usr_id','=','A3456739')->get();
      	// foreach ($comments as $key => $comment) {
      	// 	 foreach ($comment->comment as $key1 => $value) {
      		

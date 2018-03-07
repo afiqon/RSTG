@@ -98,7 +98,7 @@
                     <li class="list-group-item">
                       <div class="row">
                         <div class="col-md-3"><b>No. Kad Pengenalan :</b></div>
-                        <div class="col-md-9"><a class="ic"></a></div>
+                        <div class="col-md-9"><a class="icno"></a></div>
                       </div>
                     </li>
                     <li class="list-group-item">
@@ -236,9 +236,10 @@ $('#addApplication').modal('toggle');
 
              {
                 render: function (data, type, row, meta) {
+                  var btn='';
 
-               var btn='<a class="btn btn-info btn-xs btn-rounded edit" data-tooltip="true" data-placement="bottom" title="View" onclick="modalView(' + row.usr_id + ',\'' + row.user.usr_fullname + '\',\'' + row.tg_no_lesen + '\',\'' + row.tg_type.tg_type_name+ '\',\'' + row.tg_tkh_lesen_tamat + '\')"   ><i class="fa fa-eye fa-2x"></i></a>';
-   
+              btn='<a class="btn btn-info btn-xs btn-rounded edit" data-tooltip="true" data-placement="bottom" title="View" onclick="modalView(\'' + row.usr_id + '\',\'' + row.user.usr_fullname + '\',\'' + row.tg_no_lesen + '\',\'' + row.tg_type.tg_type_name+ '\',\'' + row.tg_tkh_lesen_tamat + '\')"   ><i class="fa fa-eye fa-2x"></i></a>';
+              
                   return btn;
                 }, width: "8%"
                 , orderable: false
@@ -268,7 +269,8 @@ function tblyajra()
 function modalView(id,author,licenseno,type,dateexpired)
 {
     $('#modalView').modal('toggle');
-     $('.ic').html(id);
+     $('.icno').html(id);
+     console.log('ic no',id);
     $('.nama').html(author);
     $('.licenseno').html(licenseno);
 $('.type').html(type);
