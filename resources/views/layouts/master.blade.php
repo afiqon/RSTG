@@ -6,7 +6,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>RSTG </title>
+    <title>Laravel </title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
       <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap 3.3.2 -->
@@ -45,6 +45,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     max-height: 1000px;
 
 }
+
 .content-wrapper,
 .right-side {
 background-color: #ffffff;

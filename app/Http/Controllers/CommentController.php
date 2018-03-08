@@ -133,6 +133,7 @@ class CommentController extends Controller
                 $licenseno= $request['licenseno'];
                 $data->where('tg_no_lesen','=',$licenseno);
            }
+           $data->whereHas('user');
         // $datatables =  Datatables::eloquent($data);
 
         // $datatables   ->addIndexColumn()
@@ -146,6 +147,7 @@ class CommentController extends Controller
         //     });
      // $base = new DataTableBase($data, $datatables);
      //        return $base->render(null);
+           ini_set('memory_limit', '-1');
           $tg=$data->get();
            $res=new stdClass();
            $res->data=$tg;

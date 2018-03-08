@@ -36,6 +36,8 @@ Route::group(['middlewareGroups' => ['web']], function () {
  	Route::post('/deleteComment', 'CommentController@deleteComment')->name('deleteComment');
  	Route::post('/pieChart', 'CommentController@pieChart')->name('pieChart');
     Route::post('/findTg', 'CommentController@findTg')->name('findTg');
+    //Tourism Guide
+    Route::get('/TourismGuide', 'TGController@TourismGuide')->name('TourismGuide');
 
 
 });
